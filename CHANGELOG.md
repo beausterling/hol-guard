@@ -92,6 +92,21 @@ Older releases are preserved in the [changelog archive](docs/changelog-archive.m
 * **native:** a package-intent parse now sends the caller's `PATH` to the resident. The resident is long-lived, so its own `PATH` is the one it was spawned with; a manager it cannot resolve (`npx` from a test or tool directory) made the TypeScript launch evidence incomplete and sent a contained typecheck back to review even though the caller resolved the manager fine.
 * **native:** a resident that answers a context-digest request with its own error envelope is now reported by that code — and recorded against the resilience breaker — instead of being flattened into `native_context_digest_result_invalid`. An envelope outside the contract keeps its code in the rejection reason, and a rejected result names the contract clause that rejected it with the offending keys, so a foreign frame, a stale frame and a truncated read are no longer indistinguishable.
 
+## [3.40.0](https://github.com/hashgraph-online/hol-guard/compare/v3.39.0...v3.40.0) (2026-10-10)
+
+
+### Features
+
+* **guard:** classify detector false positives in the Rust resident ([#3900](https://github.com/hashgraph-online/hol-guard/issues/3900)) ([87654ca](https://github.com/hashgraph-online/hol-guard/commit/87654cab725dcbd8c737c62a95362a2ee80ab0f6))
+
+
+### Bug Fixes
+
+* **ci:** raise coverage shard count 192 to 256 ([#3911](https://github.com/hashgraph-online/hol-guard/issues/3911)) ([50c3213](https://github.com/hashgraph-online/hol-guard/commit/50c3213b58f80671b2cba5c937534c48efc6d629))
+* **ci:** warm native resident for saved_v1; re-isolate flaky bridge daemon tests ([#3898](https://github.com/hashgraph-online/hol-guard/issues/3898)) ([47ed52c](https://github.com/hashgraph-online/hol-guard/commit/47ed52cb20050406b99aa0a5b1ac6c747b92e685))
+* **guard:** retain business-policy sources in the Windows vault ([#3902](https://github.com/hashgraph-online/hol-guard/issues/3902)) ([74ccf04](https://github.com/hashgraph-online/hol-guard/commit/74ccf04b88067892b3194a5efe67004301a3a258))
+* **scanner:** recognize LICENSE.md and standard license filename variants ([#3903](https://github.com/hashgraph-online/hol-guard/issues/3903)) ([48844ab](https://github.com/hashgraph-online/hol-guard/commit/48844ab044558a13c5dded95fd3391fc4b26e197))
+
 ## [3.39.0](https://github.com/hashgraph-online/hol-guard/compare/v3.38.0...v3.39.0) (2026-10-10)
 
 
