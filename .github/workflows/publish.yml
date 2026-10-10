@@ -146,7 +146,7 @@ jobs:
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:
           python-version: "3.12"
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7
         with:
           version: "0.9.26"
           enable-cache: true
@@ -614,7 +614,7 @@ jobs:
           gh api "repos/$GITHUB_REPOSITORY/contents/ci/package_size/budgets.json?ref=$SIZE_POLICY_SHA" \
             -H 'Accept: application/vnd.github.raw+json' > "$policy_root/ci/package_size/budgets.json"
           echo "HOL_GUARD_WHEEL_SIZE_CHECKER=$policy_root/scripts/ci/check_wheel_size.py" >> "$GITHUB_ENV"
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7
         with:
           version: "0.9.26"
           enable-cache: true
@@ -820,7 +820,7 @@ jobs:
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:
           python-version: "3.12"
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7
         with:
           version: "0.9.26"
           enable-cache: true
@@ -964,7 +964,7 @@ jobs:
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:
           python-version: "3.12"
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7
         with:
           version: "0.9.26"
           enable-cache: true
@@ -1236,7 +1236,7 @@ jobs:
       - uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
         with:
           ref: ${{ needs.build.outputs.source_sha }}
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7
         with:
           version: "0.9.26"
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
@@ -1341,7 +1341,7 @@ jobs:
           fetch-depth: 0
           filter: blob:none
           ref: ${{ needs.build.outputs.source_sha }}
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7
         with:
           version: "0.9.26"
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
@@ -1520,7 +1520,7 @@ jobs:
           fetch-depth: 0
           filter: blob:none
           ref: ${{ needs.build.outputs.source_sha }}
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7
         with:
           version: "0.9.26"
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
@@ -1699,7 +1699,7 @@ jobs:
           fetch-depth: 0
           filter: blob:none
           ref: ${{ needs.build.outputs.source_sha }}
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7
         with:
           version: "0.9.26"
       - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
@@ -2355,7 +2355,7 @@ jobs:
       - uses: actions/setup-python@a309ff8b426b58ec0e2a45f0f869d46889d02405
         with:
           python-version: "3.12"
-      - uses: astral-sh/setup-uv@fac544c07dec837d0ccb6301d7b5580bf5edae39
+      - uses: astral-sh/setup-uv@c18668ad3cf93ea998bef934396af7bb5c839dc7
         with:
           version: "0.9.26"
       - name: Sync locked release tooling
